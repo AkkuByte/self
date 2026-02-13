@@ -1,0 +1,302 @@
+:root {
+  /* Base Colors */
+  --color-bg: #1e1e2f; /* Dark slate background */
+  --color-surface: #2a2a40; /* Slightly lighter for cards/sections */
+  --color-border: #3a3a55; /* Soft contrasting border */ /* Subtle borders */
+
+  /* Accent Colors */
+  --color-primary: #5edfff; /* Cyan accent */
+  --color-secondary: #ff5e7e; /* Pink/red secondary accent */
+  --color-tertiary: #c084fc; /* Purple for highlights */
+
+  /* Text Colors */
+  --color-text: #f0f0f5; /* Primary text */
+  --color-text-muted: #a0a0ab; /* Muted/secondary text */
+
+  /* Status Colors */
+  --color-success: #32d48e;
+  --color-warning: #facc15;
+  --color-error: #ef4444;
+
+  /* Shadows and Effects */
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-glow: #5edfff; /* Cyan Glow */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body .my-soul-regular {
+  font-family: "My Soul", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body .edu-qld-hand-uniquifier {
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  padding-top: 1.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.brand h1 {
+  padding-right: 55%;
+  padding-left: 1%;
+}
+.brand a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.brand a:hover {
+  color: var(--color-primary);
+}
+#hero {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+.text {
+  padding-left: 5%;
+  padding-right: 12%;
+}
+.text h1 {
+  font-size: 5rem;
+  color: var(--color-primary);
+  font-family: "Edu QLD Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#hero .img {
+  height: 25rem;
+  width: 25rem;
+  background-image: url(person.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0px 40px var(--color-glow);
+  transition: transform 0.3s ease;
+}
+.img:hover {
+  transform: translateY(-6px);
+}
+#about {
+  padding: 4rem 2rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--color-shadow);
+  border: 1px solid var(--color-border);
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+#skills {
+  padding: 4rem 2rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+}
+#skills h2 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-card {
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  padding: 2rem;
+  min-width: 280px;
+  max-width: 340px;
+  box-shadow: 0 4px 20px var(--color-glow);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px var(--color-glow));
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+#project {
+  background-color: var(--color-bg);
+}
+#project > h1 {
+  color: var(--color-primary);
+  text-align: center;
+}
+.projects {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.projectlist {
+  background-color: var(--color-surface);
+  height: auto;
+  width: 300px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 1rem;
+  box-shadow: var(--color-glow) 0px 0px 20px;
+  transition: transform 0.3s ease;
+}
+.projectlist:hover {
+  transform: translateY(-6px);
+}
+#contact {
+  padding: 4rem 2rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0px 20px var(--color-glow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #1e1e22;
+  color: var(--color-text);
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-glow);
+}
+
+.btn-submit {
+  padding: 0.75rem 2rem;
+  background-color: var(--color-primary);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #35cfff;
+}
+
+/* section {
+  background-color: var(--color-bg);
+  height: 80vh;
+} */
